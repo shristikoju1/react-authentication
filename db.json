@@ -1,0 +1,54 @@
+{
+  "user": [
+    {
+      "id": "jhd",
+      "password": "nbs",
+      "name": "xhj",
+      "email": "SAJHX",
+      "phone": "SX",
+      "country": "nepal",
+      "address": "SSAX",
+      "gender": "male"
+    },
+    {
+      "id": "hw",
+      "password": "dnnfd",
+      "name": "dfhw",
+      "email": "sdf",
+      "phone": "dd",
+      "country": "nepal",
+      "address": "ds",
+      "gender": "male"
+    },
+    {
+      "id": "chas",
+      "password": "sdmbcam",
+      "name": "dhj",
+      "email": "sdmncs",
+      "phone": "hjsdcjsa",
+      "country": "nepal",
+      "address": "saxvgsa",
+      "gender": "female"
+    },
+    {
+      "id": "hd",
+      "password": "dbn",
+      "name": "snd",
+      "email": "nsb",
+      "phone": "snd",
+      "country": "nepal",
+      "address": "s",
+      "gender": "female"
+    },
+    {
+      "id": "sdcsd",
+      "password": "sdc",
+      "name": "sdsd",
+      "email": "admin@123.com",
+      "phone": "ds",
+      "country": "nepal",
+      "address": "sdcs",
+      "gender": "male"
+    }
+  ]
+}
