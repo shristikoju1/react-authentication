@@ -1,54 +1,83 @@
 {
   "user": [
     {
-      "id": "jhd",
-      "password": "nbs",
-      "name": "xhj",
-      "email": "SAJHX",
-      "phone": "SX",
-      "country": "nepal",
-      "address": "SSAX",
+      "id": "s",
+      "password": "a",
+      "name": "a",
+      "email": "a@gmail.com",
+      "phone": "a",
+      "country": "japan",
+      "address": "a",
+      "role":"admin",
       "gender": "male"
     },
     {
-      "id": "hw",
-      "password": "dnnfd",
-      "name": "dfhw",
-      "email": "sdf",
-      "phone": "dd",
+      "id": "user",
+      "password": "user",
+      "name": "sshdgj",
+      "email": "user@132.gmail.com",
+      "phone": "12378127",
       "country": "nepal",
-      "address": "ds",
-      "gender": "male"
-    },
-    {
-      "id": "chas",
-      "password": "sdmbcam",
-      "name": "dhj",
-      "email": "sdmncs",
-      "phone": "hjsdcjsa",
-      "country": "nepal",
-      "address": "saxvgsa",
-      "gender": "female"
-    },
-    {
-      "id": "hd",
-      "password": "dbn",
-      "name": "snd",
-      "email": "nsb",
-      "phone": "snd",
-      "country": "nepal",
-      "address": "s",
-      "gender": "female"
-    },
-    {
-      "id": "sdcsd",
-      "password": "sdc",
-      "name": "sdsd",
-      "email": "admin@123.com",
-      "phone": "ds",
-      "country": "nepal",
-      "address": "sdcs",
+      "address": "qjd",
+      "role":"user",
       "gender": "male"
     }
-  ]
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu" : "customer",
+      "haveadd" : "true",
+      "haveedit" : "true",
+      "havedelete" : "true"
+    },
+    {
+      "role": "admin",
+      "menu" : "supplier",
+      "haveadd" : "true",
+      "haveedit" : "true",
+      "havedelete" : "true"
+    },
+    {
+      "role": "user",
+      "menu" : "customer",
+      "haveadd" : "true",
+      "haveedit" : "true",
+      "havedelete" : "false"
+    },
+    {
+      "role": "user",
+      "menu" : "customer",
+      "haveadd" : "false",
+      "haveedit" : "false",
+      "havedelete" : "false"
+    }
+  ],
+  "customer": [
+      {
+        "code": 1,
+        "name": "Joe",
+        "email": "joe@in.com"
+      },
+      {
+        "code": 2,
+        "name": "Alice",
+        "email": "alice@domain.com"
+      },
+      {
+        "code": 3,
+        "name": "Bob",
+        "email": "bob@example.com"
+      },
+      {
+        "code": 4,
+        "name": "Eve",
+        "email": "eve@company.com"
+      },
+      {
+        "code": 5,
+        "name": "Charlie",
+        "email": "charlie@webmail.com"
+      }
+    ]
 }
