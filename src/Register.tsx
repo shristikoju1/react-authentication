@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import {useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 interface RegisterForm {
@@ -111,6 +111,7 @@ const Register = () => {
         }
       }).catch((err) => {
         toast.error('Failed : '+err.message);
+        console.log(err);
       });
     };
     
@@ -249,8 +250,8 @@ const Register = () => {
               </div>
             </div>
             <div className="card-footer">
-              <button type="submit" className="btn btn-primary" onSubmit={handleSubmit}>Register</button>
-              <a href="#" className="btn btn-danger">Back</a>
+              <button type="submit" className="mr-4 btn btn-primary" onSubmit={handleSubmit}>Register</button>
+              <Link to={'/'} className="btn btn-danger">Back</Link>
             </div>
           </div>
         </form>
