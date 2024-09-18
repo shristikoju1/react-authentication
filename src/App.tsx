@@ -3,7 +3,7 @@ import Home from "./Home"
 import Login from "./Login"
 import Register from "./Register"
 import AppHeader from "./AppHeader"
-import { ToastContainer } from "react-toastify"
+import { ToastContainer, Bounce } from 'react-toastify';
 import './App.scss';
 import Customer from "./Customer"
 
@@ -11,7 +11,11 @@ function App() {
 
   return (
     <div className="App">
-      <ToastContainer theme="colored"></ToastContainer>
+       <ToastContainer
+       position='bottom-right'
+        theme="colored"
+        transition={Bounce}
+      />
       <BrowserRouter>
       <AppHeader/>
         <Routes>
