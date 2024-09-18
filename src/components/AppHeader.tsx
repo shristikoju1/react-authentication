@@ -9,7 +9,8 @@ const AppHeader = () => {
     const { pathname } = location;
 
     useEffect(() => {
-        const username = sessionStorage.getItem('username');
+        const username = localStorage.getItem('user');
+        console.log(username);
 
         if (!username) {
             navigate('/login');

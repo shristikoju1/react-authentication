@@ -44,7 +44,8 @@ const Customer = () => {
   };
 
   const getUserAccess = () => {
-    const userrole = sessionStorage.getItem("userrole") || "";
+    const userrole = localStorage.getItem("role") || "";
+    console.log('usrerrole',userrole);
     fetch(`http://localhost:8000/roleaccess?role=${userrole}&menu=customer`)
       .then((res) => {
         if (!res.ok) {
@@ -57,7 +58,7 @@ const Customer = () => {
       .then((res) => {
         if (res.length > 0) {
           setView(true);
-          let userobj = res[0];
+          const userobj = res[0];
           setAccess({
             haveedit: userobj.haveedit === "true",
             haveadd: userobj.haveadd === "true",
@@ -102,13 +103,12 @@ const Customer = () => {
         </div>
         <div className="px-6 py-4">
           <button
-            className={`px-4 py-2 mb-2 rounded-md text-white ${
+            className={`px-4 py-2 mb-2 rounded-md text-white text-sm ${
               access.haveadd
                 ? "bg-gray-700 hover:bg-gray-600"
-                : "bg-gray-500 cursor-not-allowed"
+                : "hidden"
             }`}
             onClick={handleAdd}
-            // disabled={!access.haveadd}
           >
             Add (+)
           </button>
@@ -132,24 +132,22 @@ const Customer = () => {
                   <td className="px-4 py-3">{item.email}</td>
                   <td className="flex px-4 py-3 space-x-2">
                     <button
-                      className={`px-3 py-1 rounded-md text-white ${
+                      className={`px-4 py-2 rounded-md text-white ${
                         access.haveedit
                           ? "bg-gray-700 hover:bg-gray-400 transition-all 0.3s ease-in"
                           : "hidden"
                       }`}
                       onClick={handleEdit}
-                    //   disabled={!access.haveedit}
                     >
                       Edit
                     </button>
                     <button
-                      className={`px-3 py-1 rounded-md text-white ${
+                      className={`px-4 py-2 rounded-md text-white text-sm ${
                         access.havedelete
                           ? "bg-[#d21a17] hover:bg-red-400 transition-all 0.3s ease-in"
-                          : "bg-red-400 cursor-not-allowed"
+                          : "hidden"
                       }`}
                       onClick={handleRemove}
-                    //   disabled={!access.havedelete}
                     >
                       Remove
                     </button>
