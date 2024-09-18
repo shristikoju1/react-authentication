@@ -1,22 +1,14 @@
-import { useEffect, useState } from "react"
-import { Link, useNavigate, useLocation } from "react-router-dom"
-
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const AppHeader = () => {
-
     const [displayUsername, setDisplayUsername] = useState('');
-    const [showMenu, setShowMenu] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
+    const { pathname } = location;
+
     useEffect(() => {
-
-        if (location.pathname === '/login' || location.pathname === '/register') {
-            setShowMenu(false);
-        } else {
-            setShowMenu(true);
-        }
-
         const username = sessionStorage.getItem('username');
 
         if (!username) {
@@ -24,22 +16,31 @@ const AppHeader = () => {
         } else {
             setDisplayUsername(username);
         }
-    }, [navigate, location]);
+    }, []);
 
     return (
-        <div>
-            {showMenu && (
-                <div className="header">
-                    <Link to={"/"}>Home</Link>
-                    <Link to={"/customer"}>Customer</Link>
-                    <span style={{ marginLeft: '80%' }}>Welcome <b>{displayUsername}</b> </span>
-                    <Link style={{ float: 'right' }} to="/login">Logout</Link>
-                </div>
+        <>
+            {pathname !== '/login' && pathname !== '/register' && (
+                <header className="flex items-center justify-between px-6 py-4 text-white bg-gray-800 shadow-lg">
+                    <nav className="space-x-8 text-lg">
+                        <Link to="/" className="transition-colors hover:text-gray-400">Home</Link>
+                        <Link to="/customer" className="transition-colors hover:text-gray-400">Customer</Link>
+                    </nav>
+                    <div className="flex items-center space-x-6">
+                        <span className="text-base">
+                            Welcome, <b className="font-semibold text-[#d21a17]">{displayUsername}</b>
+                        </span>
+                        <Link 
+                            to="/login" 
+                            className="text-base transition-colors hover:text-gray-400"
+                        >
+                            Logout
+                        </Link>
+                    </div>
+                </header>
             )}
+        </>
+    );
+};
 
-        </div>
-
-    )
-}
-
-export default AppHeader 
+export default AppHeader;

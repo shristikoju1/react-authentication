@@ -1,83 +1,102 @@
 {
   "user": [
     {
-      "id": "s",
-      "password": "a",
-      "name": "a",
-      "email": "a@gmail.com",
-      "phone": "a",
-      "country": "japan",
-      "address": "a",
-      "role":"admin",
-      "gender": "male"
+      "id": "6836",
+      "username": "wapaju",
+      "password": "123",
+      "name": "Colt Gillespie",
+      "email": "kakymohaha@mailinator.com",
+      "phone": "+1 (575) 367-6767",
+      "country": "nepal",
+      "address": "Ea elit suscipit si",
+      "gender": "female",
+      "role": "admin"
     },
     {
-      "id": "user",
-      "password": "user",
-      "name": "sshdgj",
-      "email": "user@132.gmail.com",
-      "phone": "12378127",
-      "country": "nepal",
-      "address": "qjd",
-      "role":"user",
-      "gender": "male"
+      "id": "fafc",
+      "username": "vujyqozu",
+      "password": "123",
+      "name": "Velma Jacobson",
+      "email": "nocu@mailinator.com",
+      "phone": "+1 (697) 401-8796",
+      "country": "japan",
+      "address": "Do consectetur conse",
+      "gender": "female",
+      "role": "admin"
+    },
+    {
+      "id": "b4d3",
+      "username": "jabejeba",
+      "password": "123",
+      "name": "Gloria Sosa",
+      "email": "cybohemah@mailinator.com",
+      "phone": "+1 (291) 185-7564",
+      "country": "india",
+      "address": "Sint repellendus No",
+      "gender": "male",
+      "role": "admin"
+    },
+    {
+      "id": "f573",
+      "username": "Shristi",
+      "password": "shristi",
+      "name": "Shristi Koju",
+      "email": "boliguxir@mailinator.com",
+      "phone": "+1 (763) 986-4914",
+      "country": "India",
+      "address": "Quis suscipit adipis",
+      "gender": "Other",
+      "role": "admin"
     }
   ],
   "roleaccess": [
     {
       "role": "admin",
-      "menu" : "customer",
-      "haveadd" : "true",
-      "haveedit" : "true",
-      "havedelete" : "true"
-    },
-    {
-      "role": "admin",
-      "menu" : "supplier",
-      "haveadd" : "true",
-      "haveedit" : "true",
-      "havedelete" : "true"
+      "menu": "customer",
+      "haveadd": "true",
+      "haveedit": "false",
+      "havedelete": "true",
+      "id": "b318"
     },
     {
       "role": "user",
-      "menu" : "customer",
-      "haveadd" : "true",
-      "haveedit" : "true",
-      "havedelete" : "false"
-    },
-    {
-      "role": "user",
-      "menu" : "customer",
-      "haveadd" : "false",
-      "haveedit" : "false",
-      "havedelete" : "false"
+      "menu": "customer",
+      "haveadd": "true",
+      "haveedit": "true",
+      "havedelete": "false",
+      "id": "42fd"
     }
   ],
   "customer": [
-      {
-        "code": 1,
-        "name": "Joe",
-        "email": "joe@in.com"
-      },
-      {
-        "code": 2,
-        "name": "Alice",
-        "email": "alice@domain.com"
-      },
-      {
-        "code": 3,
-        "name": "Bob",
-        "email": "bob@example.com"
-      },
-      {
-        "code": 4,
-        "name": "Eve",
-        "email": "eve@company.com"
-      },
-      {
-        "code": 5,
-        "name": "Charlie",
-        "email": "charlie@webmail.com"
-      }
-    ]
+    {
+      "code": 1,
+      "name": "Joe",
+      "email": "joe@in.com",
+      "id": "3ec6"
+    },
+    {
+      "code": 2,
+      "name": "Alice",
+      "email": "alice@domain.com",
+      "id": "81c9"
+    },
+    {
+      "code": 3,
+      "name": "Bob",
+      "email": "bob@example.com",
+      "id": "b3ce"
+    },
+    {
+      "code": 4,
+      "name": "Eve",
+      "email": "eve@company.com",
+      "id": "5b8b"
+    },
+    {
+      "code": 5,
+      "name": "Charlie",
+      "email": "charlie@webmail.com",
+      "id": "d70a"
+    }
+  ]
 }

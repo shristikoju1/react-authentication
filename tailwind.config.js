@@ -9,6 +9,9 @@ export default {
     screens: {
       'sm': '335px', 
     },
+    fontFamily: {
+      'source-sans': ['"Source Sans 3"', 'sans-serif'],
+    },
     extend: {
       colors: {
         primaryColor: 'rgba(0,128,0)',
