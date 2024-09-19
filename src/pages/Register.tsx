@@ -1,7 +1,6 @@
 import { useState, FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { FcGoogle } from "react-icons/fc";
 
 interface RegisterForm {
   username: string;
@@ -72,11 +71,6 @@ const Register = () => {
       isProceed = false;
       errMsg += " Gender";
     }
-
-    // if (formData.role === "") {
-    //   isProceed = false;
-    //   errMsg += " Role";
-    // }
 
     if (!isProceed) {
       toast.warning(errMsg);
@@ -210,38 +204,6 @@ const Register = () => {
 
             <div className="form-group">
               <label className="block text-sm font-medium text-gray-700">
-                Country <span className="text-red-500">*</span>
-              </label>
-              <select
-                className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[#d21a17]"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select Country</option>
-                <option value="USA">USA</option>
-                <option value="India">India</option>
-                <option value="Nepal">Nepal</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
-                Address <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[#d21a17]"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                placeholder="Enter your address"
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
                 Gender <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-4 mt-2">
@@ -295,6 +257,42 @@ const Register = () => {
               </div>
             </div>
 
+            <div className="form-group">
+              <label className="block text-sm font-medium text-gray-700">
+                Country <span className="text-red-500">*</span>
+              </label>
+              <select
+                className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[#d21a17]"
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+              </select>
+            </div>
+
+
+
+            <div className="form-group">
+              <label className="block text-sm font-medium text-gray-700">
+                Address <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[#d21a17]"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                placeholder="Enter your address"
+                required
+              />
+            </div>
+
+      
+
           </div>
 
           <div className="flex items-start mt-4">
@@ -318,26 +316,6 @@ const Register = () => {
           >
             Register
           </button>
-
-          <div className="relative flex items-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="px-3 text-xs text-gray-500">Or continue with</span>
-            <div className="flex-grow border-t border-gray-400"></div>
-          </div>
-
-          <div className="flex items-center justify-between w-full mt-6">
-            <Link
-              to={'https://www.google.com/'}
-              target="_blank"
-              className="w-full px-10 py-2 mt-1  flex items-center justify-center gap-2 bg-[#f2f2f3] rounded-md shadow-sm"
-            >
-              <FcGoogle />
-              <span className="text-black">
-                Google
-
-              </span>
-            </Link>
-          </div>
 
           <div className="mt-4 text-sm text-center font-source-sans">
             <span>Already have an account? </span>
