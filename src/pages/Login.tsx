@@ -27,6 +27,7 @@ const Login = () => {
         await loginAction(formData); 
         toast.success("Login successful");
         navigate("/"); 
+
       } catch (error) {
         toast.error("Invalid username or password"); 
       }
@@ -64,7 +65,7 @@ const Login = () => {
           <div className="space-y-4">
             <div className="form-group">
               <label className="block text-sm font-medium text-gray-700">
-                Username or email <span className="text-red-500">*</span>
+                Username<span className="text-red-500">*</span>
               </label>
               <div className="relative w-full">
                 <MdEmail className="absolute text-gray-400 transform -translate-y-1/2 top-1/2 left-3" />
@@ -104,7 +105,7 @@ const Login = () => {
           <div className="flex items-center justify-between mt-6">
             <button
               type="submit"
-              className="block w-full px-4 py-2 text-black bg-[#f9d313] rounded-md shadow-sm hover:bg-[#d21a17] hover:text-white focus:outline-none transition-all duration-200 ease-in-out"
+              className="block w-full px-4 py-2 bg-[#ce201d] rounded-md shadow-sm hover:bg-[#d21a17] text-white focus:outline-none transition-all duration-200 ease-in-out"
             >
               Log In
             </button>

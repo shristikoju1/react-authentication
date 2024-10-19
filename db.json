@@ -63,7 +63,7 @@
       "menu": "customer",
       "haveadd": "true",
       "haveedit": "true",
-      "havedelete": "false",
+      "havedelete": "true",
       "id": "42fd"
     }
   ],
