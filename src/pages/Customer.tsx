@@ -21,7 +21,7 @@ const Customer = () => {
     haveadd: false,
     havedelete: false,
   });
-  const [view, setView] = useState<boolean>(false);
+  const [view, setView] = useState<boolean>(false); 
 
   const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ const Customer = () => {
 
   const getUserAccess = () => {
     const userrole = localStorage.getItem("role") || "";
-    console.log('usrerrole',userrole);
+    console.log('userrole', userrole);
     fetch(`http://localhost:8000/roleaccess?role=${userrole}&menu=customer`)
       .then((res) => {
         if (!res.ok) {
@@ -57,7 +57,7 @@ const Customer = () => {
       })
       .then((res) => {
         if (res.length > 0) {
-          setView(true);
+          setView(true); 
           const userobj = res[0];
           setAccess({
             haveedit: userobj.haveedit === "true",
@@ -102,60 +102,60 @@ const Customer = () => {
           <h3 className="text-2xl font-bold">Customer Listing</h3>
         </div>
         <div className="px-6 py-4">
-          <button
-            className={`px-4 py-2 mb-2 rounded-md text-white text-sm ${
-              access.haveadd
-                ? "bg-gray-700 hover:bg-gray-600"
-                : "hidden"
-            }`}
-            onClick={handleAdd}
-          >
-            Add (+)
-          </button>
-          <table className="w-full mt-4 border border-gray-300 rounded-md table-auto">
-            <thead>
-              <tr className="text-left text-white bg-gray-700">
-                <th className="px-4 py-3 border-b">Code</th>
-                <th className="px-4 py-3 border-b">Name</th>
-                <th className="px-4 py-3 border-b">Email</th>
-                <th className="px-4 py-3 border-b">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {customerList.map((item) => (
-                <tr
-                  key={item.code}
-                  className="bg-white border-b hover:bg-gray-100"
-                >
-                  <td className="px-4 py-3">{item.code}</td>
-                  <td className="px-4 py-3">{item.name}</td>
-                  <td className="px-4 py-3">{item.email}</td>
-                  <td className="flex px-4 py-3 space-x-2">
-                    <button
-                      className={`px-4 py-2 rounded-md text-white ${
-                        access.haveedit
-                          ? "bg-gray-700 hover:bg-gray-400 transition-all 0.3s ease-in"
-                          : "hidden"
-                      }`}
-                      onClick={handleEdit}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className={`px-4 py-2 rounded-md text-white text-sm ${
-                        access.havedelete
-                          ? "bg-[#d21a17] hover:bg-red-400 transition-all 0.3s ease-in"
-                          : "hidden"
-                      }`}
-                      onClick={handleRemove}
-                    >
-                      Remove
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          {view && (
+            <>
+              <button
+                className={`px-4 py-2 mb-2 rounded-md text-white text-sm ${
+                  access.haveadd ? "bg-gray-700 hover:bg-gray-600" : "hidden"
+                }`}
+                onClick={handleAdd}
+              >
+                Add (+)
+              </button>
+              <table className="w-full mt-4 border border-gray-300 rounded-md table-auto">
+                <thead>
+                  <tr className="text-left text-white bg-gray-700">
+                    <th className="px-4 py-3 border-b">Code</th>
+                    <th className="px-4 py-3 border-b">Name</th>
+                    <th className="px-4 py-3 border-b">Email</th>
+                    <th className="px-4 py-3 border-b">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {customerList.map((item) => (
+                    <tr key={item.code} className="bg-white border-b hover:bg-gray-100">
+                      <td className="px-4 py-3">{item.code}</td>
+                      <td className="px-4 py-3">{item.name}</td>
+                      <td className="px-4 py-3">{item.email}</td>
+                      <td className="flex px-4 py-3 space-x-2">
+                        <button
+                          className={`px-4 py-2 rounded-md text-white ${
+                            access.haveedit
+                              ? "bg-gray-700 hover:bg-gray-400 transition-all 0.3s ease-in"
+                              : "hidden"
+                          }`}
+                          onClick={handleEdit}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className={`px-4 py-2 rounded-md text-white text-sm ${
+                            access.havedelete
+                              ? "bg-[#d21a17] hover:bg-red-400 transition-all 0.3s ease-in"
+                              : "hidden"
+                          }`}
+                          onClick={handleRemove}
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </>
+          )}
+          {!view && <p className="text-center text-red-600">Loading access...</p>}
         </div>
       </div>
     </div>

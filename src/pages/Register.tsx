@@ -127,7 +127,8 @@ const Register = () => {
           <div className="space-y-4">
             <div className="flex gap-4 form-group">
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block text-sm font-medium text-gray-700"
+                htmlFor="username">
                   Username <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -141,7 +142,8 @@ const Register = () => {
               </div>
 
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block text-sm font-medium text-gray-700"
+                htmlFor="password">
                   Password <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -160,7 +162,8 @@ const Register = () => {
             </div>
 
             <div className="form-group">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block text-sm font-medium text-gray-700"
+                htmlFor="name">
                   Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -175,7 +178,8 @@ const Register = () => {
               </div>
               
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700"
+              htmlFor="email">
                 Email <span className="text-red-500">*</span>
               </label>
               <input
@@ -189,7 +193,10 @@ const Register = () => {
             </div>
 
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label 
+                className="block text-sm font-medium text-gray-700"
+                htmlFor="phone"
+                >
                 Phone No <span className="text-red-500">*</span>
               </label>
               <input
@@ -203,7 +210,10 @@ const Register = () => {
             </div>
 
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label 
+                className="block text-sm font-medium text-gray-700"
+                htmlFor="gender"
+                >
                 Gender <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-4 mt-2">
@@ -258,7 +268,10 @@ const Register = () => {
             </div>
 
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label 
+                className="block text-sm font-medium text-gray-700"
+                htmlFor="country"
+              >
                 Country <span className="text-red-500">*</span>
               </label>
               <select
@@ -278,7 +291,10 @@ const Register = () => {
 
 
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label 
+                className="block text-sm font-medium text-gray-700"
+                htmlFor="address"
+                >
                 Address <span className="text-red-500">*</span>
               </label>
               <textarea
@@ -302,10 +318,10 @@ const Register = () => {
               className="w-3 h-3 text-[#d21a17] border-gray-300 rounded focus:ring-[#d21a17]"
             />
             <p className="ml-2 text-xs text-gray-700">
-              I certify that I agree to the 
-              <a href="#" className="text-[#d21a17] hover:underline mx-1">Terms and Conditions</a>
-              and
-              <a href="#" className="text-[#d21a17] hover:underline mx-1"> Privacy Policy</a>.
+              I certify that I agree to the{" "}
+              <a href="/" className="text-[#d21a17] hover:underline mx-1">Terms and Conditions</a>{" "}
+              and{" "}
+              <a href="/" className="text-[#d21a17] hover:underline mx-1"> Privacy Policy</a>.
             </p>
           </div>
 
