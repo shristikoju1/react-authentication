@@ -28,8 +28,8 @@ const Login = () => {
         toast.success("Login successful");
         navigate("/"); 
 
-      } catch (error) {
-        toast.error("Invalid username or password"); 
+      } catch {
+        toast.error("Invalid username or password:"); 
       }
     }
   };
@@ -64,7 +64,8 @@ const Login = () => {
         <form onSubmit={proceedLogin}>
           <div className="space-y-4">
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700"
+              htmlFor="username">
                 Username<span className="text-red-500">*</span>
               </label>
               <div className="relative w-full">
@@ -81,7 +82,8 @@ const Login = () => {
             </div>
 
             <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700"
+              htmlFor="password">
                 Password <span className="text-red-500">*</span>
               </label>
               <div className="relative w-full">
